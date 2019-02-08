@@ -18,6 +18,8 @@ require (
 replace github.com/travisjeffery/gomodlib/subpkga => github.com/travisjeffery/gomodlib/subpkga v0.0.0-20190208090204-d8f7841ac5e3
 ~~~
 
+The [replace directive](https://github.com/golang/go/wiki/Modules#when-should-i-use-the-replace-directive) allows to control which version of the sub package we're using. In this case we're saying we want to use [d8f7841ac5e3](d8f7841ac5e3ae6b428b7b25b308c0ebdea73683) so we can use the field added in that commit.
+
 If you don't care about using specific sub package versions you don't need to work about any of this, just go get the root package and you're done.
 
 [gomodservice](https://github.com/travisjeffery/gomodservice) is an example of a project depending on your packages, the go.mod file in that project is how you'd set yours up as well.
