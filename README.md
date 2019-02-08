@@ -2,7 +2,7 @@ This is a test project to show how to use Go modules when building projects and 
 
 For example, let's say you have one team who owns a pg package and another team that owns a kafka package. You want to have the pg team be able to make changes to their package without unintentionally affecting the kafka package or users of the kafka package.
 
-The key thing is to add a go.mod for each sub package, instead of having one top-level go.mod for the whole repo. This way in your service' go.mod file you can control that sub packages version like so. Giving each sub package their own go.mod gives them their own identity from a go module perspective, as described in the [go mod wiki](https://github.com/golang/go/wiki/Modules#gomod).
+The key thing is to add a go.mod for each sub package, instead of having one top-level go.mod for the whole repo. Giving each sub package their own go.mod gives them their own identity from a go module perspective, as described in the [go mod wiki](https://github.com/golang/go/wiki/Modules#gomod). This allows you to control the sub package versions you depend on.
 
 Here's an example of how you'd setup the go.mod of the project that's using the libraries:
 
