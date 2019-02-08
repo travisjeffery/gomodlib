@@ -18,7 +18,7 @@ require (
 replace github.com/travisjeffery/gomodlib/subpkga => github.com/travisjeffery/gomodlib/subpkga v0.0.0-20190208090204-d8f7841ac5e3
 ~~~
 
-The [replace directive](https://github.com/golang/go/wiki/Modules#when-should-i-use-the-replace-directive) allows to control which version of the sub package you're using. In this case you're saying you want to use [d8f7841ac5e3](d8f7841ac5e3ae6b428b7b25b308c0ebdea73683), so you can use the field added in that commit.
+The [replace directive](https://github.com/golang/go/wiki/Modules#when-should-i-use-the-replace-directive) allows to control which version of the sub package you're using. In this case you're saying you want to use [d8f7841ac5e3](d8f7841ac5e3ae6b428b7b25b308c0ebdea73683), so you can use the field added in that commit. If your project was updated to use different versions of the gomodlib or subpkgb packages, your project would continue to use subpkga@d8f7841ac5e3.
 
 If you don't care about using specific sub package versions you don't need to work about any of this, just go get the root package and you're done.
 
